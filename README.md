@@ -1,6 +1,6 @@
 # TCG Card Detection
 
-## Aluno: Bruno d'Almeida Franco (github)
+## Aluno: [Bruno d'Almeida Franco] (https://github.com/brunodf05)
 #### Orientador: Vitor Bento de Sousa
 
 ---
