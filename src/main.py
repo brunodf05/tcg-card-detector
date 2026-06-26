@@ -8,11 +8,15 @@ while True:
     if not ret:
         break
 
-    output = detect_cards(frame)
+    output, warped_cards = detect_cards(frame)
 
     cv2.imshow("Card Detection", output)
 
-    if cv2.waitKey(1) & 0xFF == 27:  # ESC para sair
+    # 🔥 mostrar cartas corrigidas
+    for i, card in enumerate(warped_cards):
+        cv2.imshow(f"Card {i}", card)
+
+    if cv2.waitKey(1) & 0xFF == 27:
         break
 
 cap.release()
