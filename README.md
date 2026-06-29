@@ -8,7 +8,7 @@
 Trabalho apresentado ao curso [VC MASTER](https://ica.puc-rio.ai/vc-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
 - [Link para o código](src\card_detector.ipynb).
-- [Link para a imagem de teste](runs\detect\predict\1test_img.jpg)
+- [Link para a imagem de teste](runs\detect\predict-2\1test_img.jpg)
 ---
 
 ### Resumo
@@ -31,7 +31,7 @@ O treinamento do modelo foi feito utilizando Yolo8 para a primeira instancia do 
 
 ### 3. Resultados
 
-Ao analisar os resultados do treinamento feito com 150 epochs e reduzindo a resolucao das imagens para 640 , o modelo tem uma precisão de 0.941 , recall de 0.9 , map50 de 0.949.
+Ao analisar os resultados do treinamento feito com 150 epochs e reduzindo a resolucao das imagens para 640 , o modelo tem uma precisão de 0.941 , recall de 0.9 , map50 de 0.949, e os resultados para os conjuntos de treino, validacáo e teste temos respectivamente: precisão de 0.9563, recall de 0.9251, map50 de 0.9679; precisão de 0.941, recall de 0.9003, map50 de 0.9489; precisão de 0.9002, recall de 0.8589, map50 de 0.903.
 
 ### 4. Conclusões
 
