@@ -13,29 +13,33 @@ Trabalho apresentado ao curso [VC MASTER](https://ica.puc-rio.ai/vc-master) como
 
 ### Resumo
 
-Projeto de visão computacional para detecção de cartas de TCG. O objetivo do trabalho é a detecção de cartas em uma mesa de jogo de TCG (Trading Card Games) por meio de webcam em tempo real ou por video gravado.
+Projeto de Visão Computacional para detecção de cartas de TCG. O objetivo do trabalho é detectar cartas em uma mesa de jogo de TCG (Trading Card Games) por meio de webcam em tempo real ou de vídeos gravados, utilizando as técnicas aprendidas ao longo do curso para treinamento e validação do modelo, inicialmente aplicado em imagens para, posteriormente, evoluir para vídeos e processamento em tempo real.
 
 ### Abstract
 
-Project of Computer Vision for TCG cards detection. The goal of the project is to detect TCG (Trading Card Games) cards on a table either by webcam in real time or by previously recorded videos.
+Computer Vision project for TCG card detection. The goal of this project is to detect TCG (Trading Card Games) cards on a game table using either a real-time webcam feed or previously recorded videos, applying the techniques learned throughout the course for model training and validation. The model is initially trained using images and will later be extended to process videos and real-time camera input.
 
 ### 1. Introdução
 
-Com o aumento no numero de TCGs surgindo e comunidades que participam crescendo constantemente, seja tanto por hobby ou de forma competitiva, alem do aumento de torneios de formato online tanto para jogar com webcam quanto a transmissao via plataformas de streaming, muitas vezes é dificil para quem esta entrando no meio de se familiarizar com as mesas vendo pela primeira vez e mais dificil ainda saber o que cada carta na mesa quer dizer para o jogo. O objetivo final desse projeto é a criacao de um programa onde ao utilizar tanto para jogar ou acompanhando um video de aprendizado o usuario possa identificar cada carta que esta dentro da mesa de jogo e possa tambem identifica-la de forma mais rapida, mesmo tendo uma qualidade de video baixa.
+Com o aumento do número de TCGs e o crescimento constante de suas comunidades, tanto por hobby quanto de forma competitiva, além do aumento da realização de torneios em formato online, seja para partidas por webcam ou transmissões em plataformas de streaming, muitas vezes é difícil para novos jogadores se familiarizarem com o estado da mesa de jogo. Além disso, torna-se ainda mais difícil compreender rapidamente o significado de cada carta presente na mesa. O objetivo final deste projeto é criar um programa que permita ao usuário identificar automaticamente cada carta presente em uma mesa de jogo, tanto durante uma partida quanto ao assistir a vídeos educativos, possibilitando uma identificação rápida e precisa mesmo em vídeos de baixa qualidade.
 
 ### 2. Modelagem
 
-Para a preparação do dataset foram tiradas 300 imagens de diferentes angulos e qualidades de diversas mesas de jogos e torneios online transmitidos, tanto por webcam quanto videos em alta qualidade. Foi utilizado a ferramenta Roboflow para a preparação desse dataset de forma manual identificando nas imagens todas as cartas nas imagens.
+Para a preparação do dataset, foram coletadas 300 imagens de diferentes ângulos e níveis de qualidade, provenientes de diversas mesas de jogos e torneios online, tanto por webcam quanto por vídeos em alta qualidade. Foi utilizada a ferramenta Roboflow para a anotação manual do dataset, identificando todas as cartas presentes em cada imagem.
 
-O treinamento do modelo foi feito utilizando Yolo8 para a primeira instancia do projeto de detecção de objetos.
+O treinamento do modelo foi realizado utilizando o YOLOv8 como primeira etapa do projeto de detecção de objetos.
 
 ### 3. Resultados
 
-Ao analisar os resultados do treinamento feito com 150 epochs e reduzindo a resolucao das imagens para 640 , o modelo tem uma precisão de 0.941 , recall de 0.9 , map50 de 0.949, e os resultados para os conjuntos de treino, validacáo e teste temos respectivamente: precisão de 0.9563, recall de 0.9251, map50 de 0.9679; precisão de 0.941, recall de 0.9003, map50 de 0.9489; precisão de 0.9002, recall de 0.8589, map50 de 0.903.
+Ao analisar os resultados do treinamento, realizado com 150 epochs e resolução de imagem reduzida para 640 × 640 pixels, o modelo obteve precisão de 0,941, recall de 0,900, e mAP@50 de 0,949. Para os conjuntos de treino, validação e teste, os resultados foram, respectivamente:
+
+Treino: precisão de 0,9563, recall de 0,9251 e mAP@50 de 0,9679;
+Validação: precisão de 0,9410, recall de 0,9003 e mAP@50 de 0,9489;
+Teste: precisão de 0,9002, recall de 0,8589 e mAP@50 de 0,9030.
 
 ### 4. Conclusões
 
- Os resultados são aceitaveis para o treinamento inicial feito para a primeira parte desse projeto com o foco da detecção de objetos, para a continuidade dele serão realizados treinamento de modelos de similaridade, OpenCV para a utilização de videos e acesso a APIs das empresas responsaveis para identificação precisa do dataset de cada carta especificamente.
+ Os resultados obtidos são satisfatórios para a primeira etapa deste projeto, cujo foco é a detecção de objetos. Como continuidade do trabalho, serão realizados treinamentos de modelos de similaridade, integração com OpenCV para processamento de vídeos em tempo real e acesso às APIs das empresas responsáveis pelos jogos, permitindo a identificação precisa da carta correspondente a cada objeto detectado.
 
 ---
 
